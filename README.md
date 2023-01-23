@@ -66,6 +66,7 @@ After you're finished please remove all the comments and instructions!
   <ul>
     <li><a href="https://www.postgresql.org/">SQL</a></li>
   </ul>
+  </details>
 
 
 <!-- Features -->
