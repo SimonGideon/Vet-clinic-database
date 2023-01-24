@@ -1,4 +1,3 @@
-
 <a name="readme-top"></a>
 
 <!--
@@ -52,30 +51,31 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Vet clinic database <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> Thia is a database that manages the operation of the Vet CLinic.
 
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+>I used the following technologies for thsi project
 
 <details>
-  <summary>Client</summary>
+<summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">SQL</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
-  </details>
-
+</details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> this prject performs the following operations.
 
-- **[Query to get desired output]**
+- **Maintain data of animals tables**
+- **Run queries to get the desired output**
+- **keep record of all data in tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +93,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> This project cannot be ran directly into your machine.
 
 To get a local copy up and running, follow these steps.
 
@@ -105,7 +105,7 @@ In order to run this project you need:
 Example command:
 
 ```sh
- gem install rails
+ gem install postgresql
 ```
  -->
 
@@ -113,39 +113,37 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/SimonGideon/Vet-clinic-database
 ```
---->
+
 
 ### Install
 
-Install this project with:
+Install this project with(Ubuntu):
 
-<!--
-Example command:
 
 ```sh
-  cd my-project
-  gem install
+  sudo apt-get install postgresql postgesql-contrib
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
+
 
 ```sh
-  rails server
+sudo systemctl status postgresql.service
+sude passwd postgres ##set your password
+sudo su -l postgress
+psql ## to start postgres
+\c database name
+
+  
 ```
---->
 
 ### Run tests
 
@@ -179,20 +177,26 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Simon Gideon**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@SimonGideon](https://github.com/SimonGideon)
+- Twitter: [@Simo_Giddy](https://twitter.com/Simo_Giddy)
+- LinkedIn: [mnayi-gideon](https://linkedin.com/in/mnayi-gideon)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> The following will be added to the future release of the project.
+
+- [ ] **Update Tabele**
+- [ ] **Add and remove table**
+- [ ] **Muttiple tables to maintain the data**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
