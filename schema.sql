@@ -7,3 +7,7 @@ date_of_birth DATE,
 escape_attempts INT,
 neutered bool,
 weight_kg decimal);
+
+ALTER TABLE animals
+ADD species VARCHAR(50);
+
