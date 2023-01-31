@@ -14,3 +14,7 @@ VALUES('Charmander', DATE '2020-02-08',0,false,11),('Plantmon',DATE '2021-11-15'
 -- insert values into owners
 INSERT INTO owners (full_name,age)
 VALUES ('Sam Smith', 34), ('Jennifer Orwell', 19),('Bob', 45),('Melody Pond', 77), ('Dean Winchester', 14), ('Jodie Whittaker', 38);
+
+-- insert into species
+INSERT INTO species (name) VALUES('Pokemon'), ('Digimon');
+
