@@ -18,3 +18,6 @@ VALUES ('Sam Smith', 34), ('Jennifer Orwell', 19),('Bob', 45),('Melody Pond', 77
 -- insert into species
 INSERT INTO species (name) VALUES('Pokemon'), ('Digimon');
 
+UPDATE animals SET species_id =1 WHERE name LIKE '%mon';
+UPDATE animals SET species_id =2 WHERE species_id IS NULL;
+
