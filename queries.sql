@@ -42,5 +42,34 @@ SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered ORDER BY MA
 SELECT species, MIN(weight_kg) as min_weight, MAX(weight_kg) as max_weight FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
+-- naming became ambigous so I had to rename my column names
+ ALTER TABLE owners RENAME COLUMN id TO owned_id;
+ 
+--  animals owned by Melody Pond
+SELECT id, name, full_name FROM animals INNER JOIN owners ON animals.owner_id = owners.owned_id WHERE full_name='Melody Pond';
+
+-- renaming my attributes ambigous
+ALTER TABLE species  RENAME COLUMN id TO species_id;
+ALTER TABLE species  RENAME COLUMN name TO species_name;
+
+-- List of all animals that are pokemon (their type is Pokemon).
+SELECT id, name, species_name FROM animals INNER JOIN species ON animals.species_id = species.species_id WHERE species_name='Pokemon';
+
+-- List all owners and their animals, remember to include those that don't own any animal.
+SELECT owned_id, full_name, name FROM animals RIGHT JOIN owners ON animals.owner_id = owners.owned_id;
+
+-- How many animals are there per species?
+SELECT species.species_id, species.species_name, count(animals.id) myCounts from species LEFT JOIN animals ON species.species_id=animals.species_id GROUP BY species.specieS_id, species.species_name;
+
+-- List all Digimon owned by Jennifer Orwell.
+SELECT id, name, owner_id, species_name FROM animals INNER JOIN species ON animals.species_id = species.species_id WHERE species.species_name='Digimon' AND owner_id=2;
+
+-- List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT id, name,full_name, escape_attempts FROM animals INNER JOIN owners ON animals.owner_id = owners.owned_id WHERE full_name='Dean Winchester' AND animals.escape_attempts=0;
+
+SELECT owned_id, full_name, count(animals.id) Possesions from owners LEFT JOIN animals ON  owners.owned_id=animals.owner_id GROUP BY owned_id, full_name;
+
+
+
 
 
