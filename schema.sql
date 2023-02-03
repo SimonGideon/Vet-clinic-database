@@ -41,6 +41,13 @@ ALTER TABLE animals ADD FOREIGN KEY (species_id) REFERENCES species(id);
 -- make owners_id foreign key with refrence from owners tbl
 ALTER TABLE animals ADD FOREIGN KEY (owner_id) REFERENCES owner(id);
 
+-- join table
+CREATE TABLE vets (id SERIAL PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+age INT NOT NULL,
+date_of_registration date NOT NULL);
+
+
 
 
 
