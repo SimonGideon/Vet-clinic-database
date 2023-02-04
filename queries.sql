@@ -69,7 +69,14 @@ SELECT id, name,full_name, escape_attempts FROM animals INNER JOIN owners ON ani
 
 SELECT owned_id, full_name, count(animals.id) Possesions from owners LEFT JOIN animals ON  owners.owned_id=animals.owner_id GROUP BY owned_id, full_name;
 
-
+-- joining table
+SELECT a.name
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1
 
 
 
