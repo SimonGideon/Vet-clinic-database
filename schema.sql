@@ -47,6 +47,14 @@ name VARCHAR(50) NOT NULL,
 age INT NOT NULL,
 date_of_registration date NOT NULL);
 
+CREATE TABLE
+vet_clinic=# CREATE TABLE specialization (
+species_id INT REFERENCES species(species_id),
+vet_id INT REFERENCES vets(id),
+PRIMARY KEY (species_id, vet_id)
+);
+
+
 
 
 
