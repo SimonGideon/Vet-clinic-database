@@ -15,7 +15,7 @@ ADD species VARCHAR(50);
 -- create owners table
 CREATE TABLE owners(
    id SERIAL PRIMARY KEY,
-   full_name VARCHAR(50) NOT NULL, age INT NOT NULL
+   full_name VARCHAR(50) NOT NULL, age INT
 );
 
 
@@ -57,7 +57,7 @@ PRIMARY KEY (species_id, vet_id)
 CREATE TABLE visits (
 animal_id INT REFERENCES animals(id),
 vet_id INT REFERENCES vets(id),
-visit_date DATE NOT NULL,
+date_of_visit DATE NOT NULL,
 PRIMARY KEY(animal_id, visit_date));
 
 
