@@ -69,6 +69,61 @@ SELECT id, name,full_name, escape_attempts FROM animals INNER JOIN owners ON ani
 
 SELECT owned_id, full_name, count(animals.id) Possesions from owners LEFT JOIN animals ON  owners.owned_id=animals.owner_id GROUP BY owned_id, full_name;
 
+-- joining table
+SELECT a.name
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+SELECT COUNT(DISTINCT a.id)
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'Stephanie Mendez';
+
+SELECT ve.name, s.species_name
+FROM vets ve
+LEFT JOIN specialization sp ON ve.id = sp.vet_id
+LEFT JOIN species s ON sp.species_id = s.species_id;
+
+SELECT a.name
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'Stephanie Mendez' AND v.visit_date BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT a.name, COUNT(v.animal_id) AS visits
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+GROUP BY a.name
+ORDER BY visits DESC
+LIMIT 1;
+
+SELECT a.name, ve.name, v.visit_date
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+SELECT a.name, COUNT(v.animal_id) AS visits
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+GROUP BY a.name
+ORDER BY visits DESC
+LIMIT 1;
+
+
+SELECT a.name                       
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets ve ON v.vet_id = ve.id
+WHERE ve.name = 'Maisy Smith'
+ORDER BY v.visit_date ASC
+LIMIT 1;
 
 
 
