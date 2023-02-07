@@ -110,3 +110,7 @@ CREATE TABLE visits(
   date_of_visit DATE,
   PRIMARY KEY(id)
 );
+
+-- Creating an INDEX
+CREATE INDEX visits(animal_vet_id_idx) ON visits(animal_id, vet_id);
+CREATE INDEX email_idx ON owners(email);
